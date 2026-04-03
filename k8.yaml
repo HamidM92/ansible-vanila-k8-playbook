@@ -62,14 +62,12 @@
           br_netfilter
 
     - name: Load overlay kernel module
-      community.general.modprobe:
-        name: overlay
-        state: present
+      community.builtin.command: modeprobe overlay
+        changed_when: false
 
     - name: Load br_netfilter kernel module
-      community.general.modprobe:
-        name: br_netfilter
-        state: present
+      community.builtin.command: modeprobe br_netfilter 
+        changed_when: false
 
     - name: Install yum-utils
       ansible.builtin.yum:
