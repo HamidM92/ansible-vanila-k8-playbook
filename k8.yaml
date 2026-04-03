@@ -62,7 +62,7 @@
           br_netfilter
 
     - name: Load overlay kernel module
-      ansible.builtin.command: modeprobe overlay
+      ansible.builtin.command: modprobe overlay
       changed_when: false
 
     - name: Load br_netfilter kernel module
