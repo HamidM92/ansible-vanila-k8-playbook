@@ -5,7 +5,7 @@
   gather_facts: true
 
   vars:
-    k8s_version: "{{ k8s_version | default('v1.35') }}"
+    k8s_version: "v1.35"
     kubernetes_repo_baseurl: "https://pkgs.k8s.io/core:/stable:/{{ k8s_version }}/rpm/"
     kubernetes_repo_gpgkey: "https://pkgs.k8s.io/core:/stable:/{{ k8s_version }}/rpm/repodata/repomd.xml.key"
 
